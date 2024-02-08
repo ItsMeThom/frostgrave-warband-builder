@@ -103,7 +103,6 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Page_Home" type="BoxContainer" parent="MarginContainer/VBoxContainer/Body"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("4_5lyrv")
@@ -647,6 +646,7 @@ disabled = true
 text = "Add Warband"
 
 [node name="Page_WarbandBuilder" type="BoxContainer" parent="MarginContainer/VBoxContainer/Body"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("14_v83mv")

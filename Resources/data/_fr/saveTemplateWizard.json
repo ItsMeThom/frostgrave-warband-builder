@@ -1,0 +1,13 @@
+{
+	"name": "",
+	"move": 0,
+	"fight": 0,
+	"shoot": 0,
+	"armour": 0,
+	"will": 0,
+	"health": 0,
+	"school": "",
+	"gear": [],
+	"spells": [],
+	"roster": []
+}
