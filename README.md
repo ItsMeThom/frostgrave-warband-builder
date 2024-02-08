@@ -19,3 +19,4 @@ TODO:
 - [ ] External export of created warbands to text/pdf format
 - [ ] Add Supplement material and option to toggle inclusion
 - [ ] Wizard/Apprentice weapon selection, Soldier customisation (nicknames)
+- [ ] Document Android build/export process (and automate it)
