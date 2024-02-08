@@ -1,5 +1,9 @@
 ## Frostgrave Warband Builder
 
+<p align="center">
+  <img src="https://github.com/ItsMeThom/frostgrave-warband-builder/blob/main/Resources/images/wiz_boot.png" alt="Sublime's custom image"/>
+</p>
+
 
 A quick and simple warband builder for Android built with Godot 4.2
 
