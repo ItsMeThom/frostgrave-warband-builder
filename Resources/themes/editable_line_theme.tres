@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ngkr1ux34bws"]
+
+[ext_resource type="FontFile" uid="uid://pd4m6sabv8ef" path="res://Resources/fonts/PirataOne-Regular.ttf" id="1_avm3a"]
+
+[resource]
+LineEdit/font_sizes/font_size = 26
+LineEdit/fonts/font = ExtResource("1_avm3a")

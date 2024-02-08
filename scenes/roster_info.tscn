@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx1hibdjk63p2"]
+
+[ext_resource type="FontFile" uid="uid://cm3obas2o2tgs" path="res://Resources/fonts/SourceSans3-Light.ttf" id="1_ggsn5"]
+[ext_resource type="Script" path="res://scenes/roster_info.gd" id="1_hn8s4"]
+[ext_resource type="FontFile" uid="uid://bb3pmhb4psm7w" path="res://Resources/fonts/SourceSans3-Bold.ttf" id="2_2082v"]
+
+[node name="RosterInfo" type="Control"]
+custom_minimum_size = Vector2(330, 24)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -12.5
+offset_right = 170.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+script = ExtResource("1_hn8s4")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label_soldierName" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "Man-At-Arms"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 10
+
+[node name="RTL_statLine" type="RichTextLabel" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("1_ggsn5")
+bbcode_enabled = true
+text = " [b]M[/b] 6 [b]F[/b] +4 [b]S[/b] +0 [b]A[/b] 10 [b]W[/b] -1 [b]H[/b] 10 
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Button_remove" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("2_2082v")
+theme_override_font_sizes/font_size = 25
+text = "x"
+flat = true
+
+[connection signal="pressed" from="HBoxContainer/Button_remove" to="." method="_on_button_remove_pressed"]

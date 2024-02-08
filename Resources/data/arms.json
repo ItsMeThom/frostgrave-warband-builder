@@ -1,0 +1,58 @@
+[
+	{
+		"name": "Dagger",
+		"damage": -1,
+		"range": "-",
+		"slots": 1,
+		"descr": "This is a knife or other small weapon such as a light club. Daggers have a -1 damage modifier. The first dagger carried by a figure does not take up an item slot. So, a wizard can carry a dagger, plus up to five other items."
+	},
+	{
+		"name": "Hand Weapon",
+		"damage": 0,
+		"range": "-",
+		"slots": 1,
+		"descr": "This includes any kind of weapon that is commonly wielded with one hand, including swords, scimitars, hand axes, maces, and even light spears. These weapons have no modifiers in combat."
+	},
+	{
+		"name": "Two Handed Weapon",
+		"damage": 2,
+		"range": "-",
+		"slots": 2,
+		"descr": "This includes any kind of heavy melee weapon that requires two hands to wield, such as two-handed swords, battle-axes, polearms, large flails, and heavy spears. These weapons do +2 damage. Because they are so bulky, these weapons take up two item slots. So, a wizard carrying a two-handed weapon may only carry up to three other items"
+	},
+	{
+		"name": "Staff",
+		"damage": -1,
+		"range": "-",
+		"slots": 1,
+		"descr": "The staff is better known for its defensive properties. Staffs do -1 damage. In hand-to-hand combat, however, it also gives the opponent a -1 damage modifier. The staff does not give this modifier to shooting attacks. This category also includes magic staffs."
+	},
+	{
+		"name": "Bow",
+		"damage": 0,
+		"range": "24”",
+		"slots": 1,
+		"descr": "The most common form of missile weapon in Frostgrave is the bow. The game makes no distinction between types of bow, and players are free to depict them as longbows, composite bows, etc. Bows may be loaded and fired in a single action. For game purposes, the maximum range of a bow is 24”, as there should never be more than 24” of open line of sight anywhere in the close confines of the Frozen City. In order to use a bow, a figure must also be carrying a quiver (which fills another item slot) or some type of magic ammunition."
+	},
+	{
+		"name": "Crossbow",
+		"damage": 2,
+		"range": "24”",
+		"slots": 1,
+		"descr": "Crossbows take one action to load and one action to fire. If a figure wishes, it may replace its movement action with a ‘reload’ action. Crossbows have a +2 damage modifier. Crossbows also have a maximum range of 24”. It is assumed that all crossbows start the game loaded and ready to fire. In order to use a crossbow, a figure must also be carrying a quiver (which fills another item slot) or some type of magic ammunition."
+	},
+	{
+		"name": "Quiver",
+		"slots": 1,
+		"damage": 0,
+		"range": "-",
+		"descr": "Quivers are designed to carry arrows or crossbow bolts. A figure carrying a bow or crossbow must also carry a quiver, or some type of magic ammunition, in order to make shooting attacks. A figure with a quiver may carry one piece of magic ammunition, one magic arrow or crossbow bolt, without it taking up an item slot"
+	},
+	{
+		"name": "Unarmed",
+		"damage": -2,
+		"range": "-",
+		"slots": 0,
+		"descr": "If a model ends up with no weapons, it can fight as normal but suffers -2 Fight and a -2 damage modifier. Creatures that have no weapons listed in their notes fight with natural weapons and are thus never counted as unarmed."
+	},
+]

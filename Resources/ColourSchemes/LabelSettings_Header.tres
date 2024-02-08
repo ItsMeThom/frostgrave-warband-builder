@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://1n5yf80wtauc"]
+
+[ext_resource type="FontFile" uid="uid://bb3pmhb4psm7w" path="res://Resources/fonts/SourceSans3-Bold.ttf" id="1_x7n03"]
+
+[resource]
+line_spacing = 5.0
+font = ExtResource("1_x7n03")

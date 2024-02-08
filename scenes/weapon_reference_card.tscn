@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=3 uid="uid://ce03h8hmcpwcq"]
+
+[ext_resource type="StyleBox" uid="uid://bgwpf6pr0kkva" path="res://Resources/themes/theme_spell_card.tres" id="1_hhe5p"]
+[ext_resource type="Script" path="res://scenes/weapon_reference_card.gd" id="2_2vrm3"]
+[ext_resource type="FontFile" uid="uid://pd4m6sabv8ef" path="res://Resources/fonts/PirataOne-Regular.ttf" id="3_32xwu"]
+[ext_resource type="FontFile" uid="uid://ctkm8hvx6cy57" path="res://Resources/fonts/SourceSans3-It.ttf" id="4_xjb61"]
+[ext_resource type="LabelSettings" uid="uid://dr0hqccs0lcam" path="res://Resources/themes/label_settings_stats_large.tres" id="5_ehqqn"]
+[ext_resource type="FontFile" uid="uid://cm3obas2o2tgs" path="res://Resources/fonts/SourceSans3-Light.ttf" id="6_gjsr6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yjbn8"]
+font = ExtResource("3_32xwu")
+font_size = 28
+
+[node name="WeaponCard" type="PanelContainer"]
+custom_minimum_size = Vector2(340, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("1_hhe5p")
+script = ExtResource("2_2vrm3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer_Title" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer_Title"]
+layout_mode = 2
+
+[node name="Label_WeaponTitle" type="Label" parent="VBoxContainer/HBoxContainer_Title/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "Hand Weapon"
+label_settings = SubResource("LabelSettings_yjbn8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_WeaponSlot" type="Label" parent="VBoxContainer/HBoxContainer_Title/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_xjb61")
+text = "1 Slot"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 36
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label_Range" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "Range"
+label_settings = ExtResource("5_ehqqn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_RangeValue" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "Touch"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label_Dmg" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 1
+text = "Damage"
+label_settings = ExtResource("5_ehqqn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_DmgValue" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 1
+text = "10
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 15
+
+[node name="RTL_descr" type="RichTextLabel" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("6_gjsr6")
+text = "This is a weapon"
+fit_content = true

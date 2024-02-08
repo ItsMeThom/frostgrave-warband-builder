@@ -1,0 +1,163 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvq5t0q3sdtax"]
+
+[ext_resource type="Theme" uid="uid://buul06pwwnxw3" path="res://Resources/ColourSchemes/MainTheme.tres" id="1_bkh8c"]
+[ext_resource type="Script" path="res://scenes/ui_main.gd" id="1_xs8ob"]
+[ext_resource type="FontFile" uid="uid://pd4m6sabv8ef" path="res://Resources/fonts/PirataOne-Regular.ttf" id="2_bo5jo"]
+[ext_resource type="Script" path="res://scenes/Page_Spells.gd" id="4_21jc7"]
+[ext_resource type="LabelSettings" uid="uid://1n5yf80wtauc" path="res://Resources/ColourSchemes/LabelSettings_Header.tres" id="4_tglm5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yhiow"]
+font = ExtResource("2_bo5jo")
+font_size = 32
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Control_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bkh8c")
+script = ExtResource("1_xs8ob")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0627451, 0.235294, 0.282353, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="AppHeader" type="BoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/AppHeader"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Warband Builder"
+label_settings = SubResource("LabelSettings_yhiow")
+horizontal_alignment = 1
+
+[node name="Body" type="BoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Page_Home" type="BoxContainer" parent="MarginContainer/VBoxContainer/Body"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Body/Page_Home"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Button_CreateWizard" type="Button" parent="MarginContainer/VBoxContainer/Body/Page_Home/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+text = "Create a Wizard"
+
+[node name="Page_Spells" type="BoxContainer" parent="MarginContainer/VBoxContainer/Body"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("4_21jc7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Body/Page_Spells"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="PageHeader" type="BoxContainer" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer/PageHeader"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Spell List"
+label_settings = SubResource("LabelSettings_yhiow")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_bkh8c")
+text = "Main School"
+label_settings = ExtResource("4_tglm5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButton_SpellSchool" type="MenuButton" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer"]
+layout_mode = 2
+text = "Select School"
+flat = false
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="VBoxContainer_SpellSelector" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer"]
+layout_mode = 2
+
+[node name="MenuButton_Spell1" type="MenuButton" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer/VBoxContainer_SpellSelector"]
+layout_mode = 2
+text = "Select Spell"
+flat = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer/VBoxContainer_SpellSelector"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme = ExtResource("1_bkh8c")
+bbcode_enabled = true
+text = "I am a text description for a spell with various [b] bold [/b] elements and all that rich text [i]nonsense[/i]"
+
+[node name="VBoxContainer_SpellSelector2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer"]
+layout_mode = 2
+
+[node name="MenuButton_Spell2" type="MenuButton" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer/VBoxContainer_SpellSelector2"]
+layout_mode = 2
+text = "Select Spell"
+flat = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer/VBoxContainer_SpellSelector2"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme = ExtResource("1_bkh8c")
+bbcode_enabled = true
+text = "I am a text description for a spell with various [b] bold [/b] elements and all that rich text [i]nonsense[/i]"
+
+[node name="VBoxContainer_SpellSelector3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer"]
+layout_mode = 2
+
+[node name="MenuButton_Spell3" type="MenuButton" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer/VBoxContainer_SpellSelector3"]
+layout_mode = 2
+text = "Select Spell"
+flat = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Body/Page_Spells/VBoxContainer/VBoxContainer_SpellSelector3"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme = ExtResource("1_bkh8c")
+bbcode_enabled = true
+text = "I am a text description for a spell with various [b] bold [/b] elements and all that rich text [i]nonsense[/i]"

@@ -1,0 +1,203 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvmhnffsk4gq"]
+
+[ext_resource type="Script" path="res://scenes/soldier_card.gd" id="1_6sw6v"]
+[ext_resource type="FontFile" uid="uid://ctkm8hvx6cy57" path="res://Resources/fonts/SourceSans3-It.ttf" id="2_5m7k0"]
+[ext_resource type="FontFile" uid="uid://bfghol3e1q3aj" path="res://Resources/fonts/SourceSans3-Regular.ttf" id="2_nb1ch"]
+[ext_resource type="FontFile" uid="uid://cm3obas2o2tgs" path="res://Resources/fonts/SourceSans3-Light.ttf" id="2_yqh8d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f4cil"]
+bg_color = Color(0.109804, 0.27451, 0.32549, 1)
+border_width_bottom = 10
+border_color = Color(1.98539e-07, 0.2028, 0.204149, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+
+[node name="SoldierCard" type="Control"]
+custom_minimum_size = Vector2(340, 220)
+layout_mode = 3
+anchor_left = 0.5
+anchor_top = 0.410714
+anchor_right = 0.5
+anchor_bottom = 0.589286
+offset_left = -170.0
+offset_top = -70.0
+offset_right = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_6sw6v")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(340, 140)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f4cil")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 332.0
+offset_bottom = 209.0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer_Header" type="HBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label_SoldierName" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer_Header"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 20
+text = "Soldier"
+horizontal_alignment = 1
+
+[node name="Label_SoldierType" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer_Header"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("2_5m7k0")
+theme_override_font_sizes/font_size = 16
+text = "     Regular"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button_buySoldier" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer_Header"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "+125 gc"
+
+[node name="HBoxContainer_Stats" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer_Stats"]
+layout_mode = 2
+
+[node name="Label_Move" type="Label" parent="VBoxContainer/HBoxContainer_Stats/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "Move"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_MoveValue" type="Label" parent="VBoxContainer/HBoxContainer_Stats/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer_Stats"]
+layout_mode = 2
+
+[node name="Label_Fight" type="Label" parent="VBoxContainer/HBoxContainer_Stats/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 1
+text = "Fight"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_FightValue" type="Label" parent="VBoxContainer/HBoxContainer_Stats/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 1
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/HBoxContainer_Stats"]
+layout_mode = 2
+
+[node name="Label_Shoot" type="Label" parent="VBoxContainer/HBoxContainer_Stats/VBoxContainer3"]
+layout_mode = 2
+mouse_filter = 1
+text = "Shoot"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_ShootValue" type="Label" parent="VBoxContainer/HBoxContainer_Stats/VBoxContainer3"]
+layout_mode = 2
+mouse_filter = 1
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer/HBoxContainer_Stats"]
+layout_mode = 2
+
+[node name="Label_Arm" type="Label" parent="VBoxContainer/HBoxContainer_Stats/VBoxContainer4"]
+layout_mode = 2
+mouse_filter = 1
+text = "Armour"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_ArmValue" type="Label" parent="VBoxContainer/HBoxContainer_Stats/VBoxContainer4"]
+layout_mode = 2
+mouse_filter = 1
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="VBoxContainer/HBoxContainer_Stats"]
+layout_mode = 2
+
+[node name="Label_Will" type="Label" parent="VBoxContainer/HBoxContainer_Stats/VBoxContainer5"]
+layout_mode = 2
+mouse_filter = 1
+text = "Will"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_WillValue" type="Label" parent="VBoxContainer/HBoxContainer_Stats/VBoxContainer5"]
+layout_mode = 2
+mouse_filter = 1
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer6" type="VBoxContainer" parent="VBoxContainer/HBoxContainer_Stats"]
+layout_mode = 2
+
+[node name="Label_Health" type="Label" parent="VBoxContainer/HBoxContainer_Stats/VBoxContainer6"]
+layout_mode = 2
+mouse_filter = 1
+text = "Health"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_HealthValue" type="Label" parent="VBoxContainer/HBoxContainer_Stats/VBoxContainer6"]
+layout_mode = 2
+mouse_filter = 1
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RTL_Gear" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/bold_font_size = 12
+bbcode_enabled = true
+text = "Gear: Staff, Healing Potion, Light Armour, Dagger"
+fit_content = true
+scroll_active = false
+
+[node name="RTL_Descr" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_yqh8d")
+theme_override_fonts/bold_font = ExtResource("2_nb1ch")
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+text = "Apothecaries start each game with a potion of healing [u](see page 91)[/u]. An apothecary may spend an action to give a potion to a member of the same warband within 1”, provided neither are in combat. The figure receiving the potion counts as having drunk it, and effects are applied immediately. Note that this rule applies to any potion carried by an apothecary, not just their free healing potion."
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer_Header/Button_buySoldier" to="." method="_on_button_buy_soldier_pressed"]

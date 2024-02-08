@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UIColourSchemeResource" load_steps=2 format=3 uid="uid://c1d50fjwusqhk"]
+
+[ext_resource type="Script" path="res://Resources/ColourSchemes/UIColorSchemeResource.gd" id="1_sjg1y"]
+
+[resource]
+script = ExtResource("1_sjg1y")
+background = "#103C48"
+current_line = "#2D5B69"
+selection = "#1c4653"
+foreground = "#adbcbc"

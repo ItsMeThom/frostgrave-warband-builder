@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://f0xbqb0ehthg"]
+
+[ext_resource type="FontFile" uid="uid://bfghol3e1q3aj" path="res://Resources/fonts/SourceSans3-Regular.ttf" id="1_ec8dk"]
+
+[resource]
+default_font = ExtResource("1_ec8dk")
+default_font_size = 16
+MenuButton/fonts/font = ExtResource("1_ec8dk")
+PopupMenu/font_sizes/font_size = 16
+PopupMenu/fonts/font = ExtResource("1_ec8dk")

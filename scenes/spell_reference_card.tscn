@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=3 uid="uid://cg6qxudx543jl"]
+
+[ext_resource type="Script" path="res://scenes/spell_reference_card.gd" id="1_4bddl"]
+[ext_resource type="FontFile" uid="uid://pd4m6sabv8ef" path="res://Resources/fonts/PirataOne-Regular.ttf" id="1_c26ip"]
+[ext_resource type="StyleBox" uid="uid://bgwpf6pr0kkva" path="res://Resources/themes/theme_spell_card.tres" id="1_dswjl"]
+[ext_resource type="FontFile" uid="uid://ctkm8hvx6cy57" path="res://Resources/fonts/SourceSans3-It.ttf" id="2_8q375"]
+[ext_resource type="LabelSettings" uid="uid://dr0hqccs0lcam" path="res://Resources/themes/label_settings_stats_large.tres" id="3_j84c0"]
+[ext_resource type="FontFile" uid="uid://cm3obas2o2tgs" path="res://Resources/fonts/SourceSans3-Light.ttf" id="4_4g8a5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yjbn8"]
+font = ExtResource("1_c26ip")
+font_size = 28
+
+[node name="SpellCard" type="PanelContainer"]
+custom_minimum_size = Vector2(340, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("1_dswjl")
+script = ExtResource("1_4bddl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer_Title" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer_Title"]
+layout_mode = 2
+
+[node name="Label_SpellTitle" type="Label" parent="VBoxContainer/HBoxContainer_Title/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "Fireball"
+label_settings = SubResource("LabelSettings_yjbn8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_SpellSchool" type="Label" parent="VBoxContainer/HBoxContainer_Title/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("2_8q375")
+text = "Pyromancy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 36
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label_Range" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "Range"
+label_settings = ExtResource("3_j84c0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_RangeValue" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "Out-of-Game (A)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label_Cast" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 1
+text = "Cast"
+label_settings = ExtResource("3_j84c0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_CastValue" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 1
+text = "10
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 15
+
+[node name="RTL_descr" type="RichTextLabel" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("4_4g8a5")
+text = "This spell can only target inanimate structures such as buildings and walls. The spellcaster rapidly speeds up the passing of time in a small area of the structure, causing it to collapse. This can create a doorway-sized hole through any wall, which should be indicated on the table somehow. The spell can also be used to collapse a section of floor beneath a figure standing on a level above the ground. In this case, the figure about to be affected must pass a Move Roll (TN22) or fall to the next level down and taking damage appropriately. If this spell is cast on a wall created by the Wall spell, the wall is completely destroyed. If it is cast on terrain holding a Wizard Eye, the Wizard Eye is cancelled."
+fit_content = true
