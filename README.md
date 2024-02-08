@@ -1,5 +1,5 @@
 ## Frostgrave Warband Builder
----
+
 
 A quick and simple warband builder for Android built with Godot 4.2
 
@@ -13,7 +13,9 @@ Features:
 [Feature Trello](https://trello.com/b/ku0Obg8B/frostgrave-warband-app-godot)
 
 TODO:
-[ ] Localisation files for spell, soldier, weapon and interface items
-[ ] External export of created warbands to text/pdf format
-[ ] Add Supplement material and option to toggle inclusion
-[ ] Wizard/Apprentice weapon selection, Soldier customisation (nicknames)
+---
+
+- [ ] Localisation files for spell, soldier, weapon and interface items
+- [ ] External export of created warbands to text/pdf format
+- [ ] Add Supplement material and option to toggle inclusion
+- [ ] Wizard/Apprentice weapon selection, Soldier customisation (nicknames)
